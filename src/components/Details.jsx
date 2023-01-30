@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getCharacter } from '../redux/actions/actions'
 import { connect } from 'react-redux'
 import { ContainerDetails } from './css/Details'
-
+import {BtnPersonaje} from "./Button/BtnPersonaje"
 const Details = (props) => {
 
  const params = useParams()
@@ -11,12 +11,13 @@ const Details = (props) => {
  useEffect(()=>{
   /* props.getCharacters(Number(params.details))*/
    props.getCharacter(Number(params.details))
-  
-   
+
  // eslint-disable-next-line react-hooks/exhaustive-deps
  },[params.details])
+ 
    return(
     <ContainerDetails>
+      <BtnPersonaje side={"back"}/>
         <div className='flex-details'>
        {
         props.character.map(el=> (
@@ -39,6 +40,7 @@ const Details = (props) => {
         ))
        }
         </div>
+        <BtnPersonaje side={"skip"}/>
     </ContainerDetails>
    )
   

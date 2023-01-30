@@ -6,6 +6,7 @@ export const ContainerDetails = styled.div`
   align-items: center;
   height: calc(100vh - 50px);
   .flex-details {
+    border: 1px solid red;
     width: 801px;
     height: 346px;
     background: #212121;

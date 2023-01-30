@@ -25,4 +25,8 @@ export const ContainerCharacters = styled.div`
    align-items: center;
    gap: 10px;
  }
+ .btn-page{
+  display: flex;
+  height: 80px;
+ }
 `
