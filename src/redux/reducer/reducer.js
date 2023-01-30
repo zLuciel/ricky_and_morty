@@ -6,22 +6,24 @@ import { GET_CHARACTERS, GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH } from "..
 const initialState = {
     characters:[],
     character:[],
-    searchCharacters:[]
+    searchCharacters:[],
+    totalPages:""
 }
 
 const reducer = (state = initialState, action)=>{
   switch (action.type) {
     case GET_CHARACTERS: return {
         ...state,
+        totalPages:action.payload.info.next,
         characters: action.payload
     }
     case GET_CHARACTER: return {
         ...state,
         character: [action.payload] 
-        /*character: state.characters.filter(el => el.id === action.payload)*/
     }
     case GET_FILTER_GENDER: return {
         ...state,
+        totalPages:action.payload.info.next,
         characters: action.payload
     }
     case GET_SEARCH: return {

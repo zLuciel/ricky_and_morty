@@ -7,7 +7,7 @@ export const getCharacters = (num) => {
   return function (dispatch) {
     fetch(`${URL}/?page=${num}`)
     .then(res => res.json())
-    .then(data => dispatch({type:GET_CHARACTERS,payload:data.results}));
+    .then(data => dispatch({type:GET_CHARACTERS,payload:data}));
   };
 };
 export const getCharacter = (id) => {
@@ -24,7 +24,7 @@ export const getGender = (num,query,value) => {
   return function (dispatch) {
     fetch(`${URL}/?page=${num}&${query}=${value}`)
     .then(res => res.json())
-    .then(data => dispatch({type:GET_FILTER_GENDER,payload:data.results}));
+    .then(data => dispatch({type:GET_FILTER_GENDER,payload:data}));
   };
 };
 

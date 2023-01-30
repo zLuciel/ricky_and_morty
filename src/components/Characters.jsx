@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import {  useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import { getCharacters, getGender } from "../redux/actions/actions";
 
 import Character from "./Character";
@@ -15,14 +15,18 @@ const Characters = (props) => {
   const [page, setPage] = useState(Number(params.pages));
   const [gender,setGender] = useState("")
   const [query,setQuery] = useState("")
-
+  const navigate = useNavigate()
+  
   useEffect(() => {
+    if(props.totalPages === null){
+    setPage(0)
+    navigate(`/personajes/${page + 1}`)
+  }
     gender !== "" ? props.getGender(page,query,gender) :props.getCharacters(page);
-    
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps  
   }, [page,gender,query]);
 
-
+  
 if(props.characters.length === 0){
 return <Loading/> 
 }
@@ -36,7 +40,7 @@ return <Loading/>
       <Filters lis={Status} name={"status"} setQuery={setQuery} setGender={setGender} />
       </div>
         <div className="grid-characters">
-       {  props.characters.map((el) => (
+       {  props.characters.results.map((el) => (
           <Character
             key={el.id}
             name={el.name}
@@ -48,7 +52,7 @@ return <Loading/>
         ))}
       </div>
      <div className="btn-page">
-     <BtnPersonaje page={page} numPages={params} setPage={setPage} side={"back"} />
+     {params.pages !== "1" && <BtnPersonaje page={page} numPages={params} setPage={setPage} side={"back"} />}
      <BtnPersonaje page={page} numPages={params} setPage={setPage} side={"skip"} />
      </div>
     </ContainerCharacters>
@@ -60,6 +64,7 @@ return <Loading/>
 const mapStateToProps = (state) => {
   return {
     characters: state.characters,
+    totalPages:state.totalPages
   };
 };
 const mapDispatchToProps = (dispatch) => {

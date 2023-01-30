@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ContainerFilters } from './css/Filters'
 import { MdArrowDropDown } from 'react-icons/md';
-const Filters = ({setGender,lis,setQuery,name}) => {
 
+const Filters = ({setGender,lis,setQuery,name}) => {
   const [mostrar, setMostrar] = useState(false);
 
   const opciones = () => {
