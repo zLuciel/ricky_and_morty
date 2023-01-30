@@ -33,6 +33,7 @@ return <Loading/>
     <ContainerCharacters>
       <h1>Personajes</h1>
       <div className="flex-filter">
+      <Filters lis={Gender} name={"species"} setQuery={setQuery} setGender={setGender}/>
       <Filters lis={Gender} name={"gender"} setQuery={setQuery} setGender={setGender}/>
       <Filters lis={Status} name={"status"} setQuery={setQuery} setGender={setGender} />
       </div>

@@ -5,13 +5,14 @@ export const ContainerFilters = styled.div`
     z-index: 4;
     position: relative;
     color: black;
+    margin-bottom: 20px;
     div {
         cursor: pointer;
         position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: max-content;
+      width: 100px;
       height: 25px;
       font-size: 0.9rem;
       padding: 5px 28px 5px 20px;
@@ -20,10 +21,12 @@ export const ContainerFilters = styled.div`
       margin-bottom: 10px;
     }
     .select-name {
+       font-family: 'Bebas Neue';
         text-transform: capitalize;
      .icon-filter{
-        top: 7px;
-        right: 10px;
+      font-size: 1.5rem;
+        top: 0px;
+        right: 12px;
         position: absolute;
      }
     }

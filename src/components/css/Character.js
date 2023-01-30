@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const ContainerCharacter = styled.div`
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(25px);
+  background: #212121;
+ box-shadow: 15px 15px 30px rgb(25, 25, 25),
+             -4px 4px 5px black;
   border-radius: 15px;
   text-align: center;
-  width: 200px;
+  width: 220px;
   height: 300px;
   h2 {
     color: greenyellow;
@@ -32,16 +33,18 @@ export const ContainerCharacter = styled.div`
     }
   }
   .btn-card-id {
+    display: ${props => props.infoView ? "block" : "none"};;
     color: white;
-
     cursor: pointer;
     border: none;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 28px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
   }
 `;

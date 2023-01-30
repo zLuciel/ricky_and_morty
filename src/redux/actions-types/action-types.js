@@ -1,3 +1,4 @@
+
 export const GET_CHARACTERS = "GET_CHARACTERS";
 export const GET_CHARACTER = "GET_CHARACTER";
 export const GET_FILTER_GENDER = "GET_FILTER_GENDER";

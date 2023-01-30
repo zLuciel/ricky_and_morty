@@ -24,6 +24,7 @@ column-gap: 50px;
         color: greenyellow;
     }
     p{
+        font-family: 'Istok Web';
         font-size: 1.2rem;
         margin-bottom:15px;
     }

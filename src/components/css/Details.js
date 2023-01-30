@@ -8,8 +8,9 @@ export const ContainerDetails = styled.div`
   .flex-details {
     width: 801px;
     height: 346px;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(25px);
+    background: #212121;
+ box-shadow: 15px 15px 30px rgb(25, 25, 25),
+             -4px 4px 5px black;
     border-radius: 15px;
     padding: 80px;
     display: flex;
@@ -38,8 +39,9 @@ export const ContainerDetails = styled.div`
         align-items: center;
         height: calc(100% - 40px);
         ul > li{
+          font-size: 1.2rem;
             list-style: none;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         ul > li > b{
             color: greenyellow;
