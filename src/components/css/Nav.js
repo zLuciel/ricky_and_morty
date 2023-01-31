@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Cabezera = styled.header`
 position: sticky;
-display: flex;
+display: none;
 justify-content: center;
 width: 100%;
 .container-flex-header{

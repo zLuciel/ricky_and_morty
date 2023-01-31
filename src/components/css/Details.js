@@ -2,9 +2,16 @@ import styled from "styled-components";
 
 export const ContainerDetails = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 50px);
+  row-gap: 50px;
+  .flex-container-details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
   .flex-details {
     margin-right: 30px;
     width: 801px;

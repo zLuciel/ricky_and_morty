@@ -17,7 +17,10 @@ const Details = (props) => {
  },[params.details])
  
    return(
+    
     <ContainerDetails>
+      <h1>Details Characters</h1>
+      <div className='flex-container-details'>
       <BtnPersonaje details={"details/"} page={page} setPage={setPage} numPages={params} side={"back"} />
         <div className='flex-details'>
        {
@@ -42,6 +45,7 @@ const Details = (props) => {
        }
         </div>
         <BtnPersonaje details={"details/"} page={page} setPage={setPage} numPages={params} side={"skip"}/>
+        </div>
     </ContainerDetails>
    )
   
