@@ -11,6 +11,9 @@ width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    @media screen and (max-width: 1593px){
+    width: 95%;
+   }
 }
 `
 

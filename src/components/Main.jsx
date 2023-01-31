@@ -2,6 +2,7 @@ import React from "react";
 import { ContainerMain, FlexMain } from "./css/Main";
 import RickyAndMorty from "../assets/main.png";
 import VideoMain from "../assets/videoRyck.mp4"
+import { NavLink } from "react-router-dom";
 const Main = () => {
   return (
     <ContainerMain>
@@ -14,7 +15,9 @@ const Main = () => {
             se va a vivir con ella y su familia utilizando el garaje como su
             laboratorio personal.
           </p>
+          <NavLink to={`/personajes/1`}>
           <button>más información</button>
+          </NavLink>
           <div className="video-main">
             <video  src={VideoMain} muted autoPlay controls loop></video>
           </div>
