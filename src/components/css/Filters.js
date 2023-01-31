@@ -30,6 +30,7 @@ export const ContainerFilters = styled.div`
         position: absolute;
      }
     }
+   
   }
 
   .container-selector > ul {
@@ -52,5 +53,6 @@ export const ContainerFilters = styled.div`
       background: black;
       color: greenyellow;
     }
-  }
+  } 
+ 
 `;

@@ -7,6 +7,14 @@ export const ContainerDetails = styled.div`
   align-items: center;
   height: calc(100vh - 50px);
   row-gap: 50px;
+  .return-details{
+    cursor: pointer;
+    border: none;
+    width:100px;
+    height: 20px;
+    background: greenyellow;
+    border-radius: 50px;
+  }
   .flex-container-details{
   display: flex;
   justify-content: center;

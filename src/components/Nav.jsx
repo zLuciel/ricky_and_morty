@@ -1,10 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import { Cabezera, ContainerNav } from "./css/Nav";
 import Search  from "./Search";
 
 const Nav = () => {
-
   return (
     <Cabezera>
       <div className="container-flex-header">

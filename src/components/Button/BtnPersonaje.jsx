@@ -11,10 +11,10 @@ export const BtnPersonaje = ({side,page,numPages,setPage,details}) => {
     const handlePage = ()=>{
         window.scroll(0, 0); 
        if(side ==="back") {
-        setPage(Number(current[Location]) - 1)
+        setPage(Number(numPages[Location]) - 1)
         navigate(`/personajes/${details}${page - 1}`)
        }else{ 
-         setPage(Number(current[Location]) + 1)
+         setPage(Number(numPages[Location]) + 1)
         navigate(`/personajes/${details}${page + 1}`)
        }
     }

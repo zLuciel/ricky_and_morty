@@ -46,6 +46,7 @@ const Details = (props) => {
         </div>
         <BtnPersonaje details={"details/"} page={page} setPage={setPage} numPages={params} side={"skip"}/>
         </div>
+        <button className='return-details'>Return</button>
     </ContainerDetails>
    )
   

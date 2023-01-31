@@ -16,6 +16,7 @@ const Characters = (props) => {
   const [gender,setGender] = useState("")
   const [query,setQuery] = useState("")
   const navigate = useNavigate()
+
   
   useEffect(() => {
     if(props.totalPages === null){
@@ -26,7 +27,8 @@ const Characters = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps  
   }, [page,gender,query]);
 
-  
+
+
 if(props.characters.length === 0){
 return <Loading/> 
 }
@@ -52,7 +54,7 @@ return <Loading/>
         ))}
       </div>
      <div className="btn-page">
-     {params.pages !== "1" && <BtnPersonaje page={page} numPages={params.pages} setPage={setPage} side={"back"} />}
+     {params.pages !== "1" && <BtnPersonaje details={""} page={page} numPages={params} setPage={setPage} side={"back"} />}
      <BtnPersonaje details={""} page={page} numPages={params} setPage={setPage} side={"skip"} />
      </div>
     </ContainerCharacters>

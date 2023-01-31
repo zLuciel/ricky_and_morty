@@ -39,6 +39,10 @@ export const ContainerCharacters = styled.div`
    display: flex;
    align-items: center;
    gap: 10px;
+   @media screen and (max-width: 1476px){
+    width: 90%;
+  border: 1px solid red;
+ }
  }
  .btn-page{
   display: flex;

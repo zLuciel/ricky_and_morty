@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerCharacter = styled.div`
-border: 2px solid greenyellow;
+ border: 2px solid greenyellow;
   overflow: hidden;
   background: #212121;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -10,6 +10,7 @@ border: 2px solid greenyellow;
   text-align: center;
   width: 220px;
   height: 300px;
+  
   h2 {
     color: greenyellow;
   }
