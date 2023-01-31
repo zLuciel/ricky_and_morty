@@ -1,7 +1,6 @@
 import styled from "styled-components";
 export const ContainerSearch = styled.div`
    position: relative;
-   z-index: 48;
   .input-search {
     padding: 0 8px;
     width: 400px;
@@ -45,4 +44,7 @@ export const ContainerSearch = styled.div`
     max-height: 170px;
     height: max-content;
   }
+  @media screen and (max-width: 1074px){
+display: none;
+}
 `;

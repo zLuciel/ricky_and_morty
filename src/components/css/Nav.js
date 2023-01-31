@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Cabezera = styled.header`
 position: sticky;
-display: none;
+display: flex;
 justify-content: center;
 width: 100%;
 .container-flex-header{
@@ -26,5 +26,8 @@ ul{
     :hover{
         color: greenyellow;
     }
+}
+@media screen and (max-width: 1074px){
+display: none;
 }
 `
