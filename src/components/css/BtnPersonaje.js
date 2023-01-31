@@ -1,29 +1,25 @@
 import styled from "styled-components";
 
 export const BtnPersonajePage = styled.button`
+
 border: none;
 background: none;
 cursor: pointer;
 span {
 
-   // padding-bottom: 7px;
     letter-spacing: 4px;
     font-size: 14px;
-    //padding-left: 15px;
     padding: ${props => props.direction === "back" ? "0px 0px 7px 15px" : "0px 15px 7px 0px"};
     text-transform: uppercase;
   }
  svg {
     fill: white;
-    transform: ${props => props.direction === "back" ? "translateX(-95px) rotateY(180deg)" : "translateX(-8px)" };// cambiar
+    transform: ${props => props.direction === "back" ? "translateX(-98px) rotateY(180deg)" : "translateX(-8px)" };// cambiar
     transition: all 0.3s ease;
   }
   :hover svg {
     //transform: translateX(-108px)  rotateY(180deg); // cambiar
     transform: ${props => props.direction === "back" ? "translateX(-108px)  rotateY(180deg)" : "translateX(0)"};
-  }
-  :active svg {
-    transform: scale(0.9);
   }
   .hover-underline-animation {
     position: relative;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { getCharacter } from '../redux/actions/actions'
 import { connect } from 'react-redux'
@@ -8,6 +8,7 @@ const Details = (props) => {
 
  const params = useParams()
 
+ const [page, setPage] = useState(Number(params.details));
  useEffect(()=>{
   /* props.getCharacters(Number(params.details))*/
    props.getCharacter(Number(params.details))
@@ -17,11 +18,11 @@ const Details = (props) => {
  
    return(
     <ContainerDetails>
-      <BtnPersonaje side={"back"}/>
+      <BtnPersonaje details={"details/"} page={page} setPage={setPage} numPages={params} side={"back"} />
         <div className='flex-details'>
        {
         props.character.map(el=> (
-          <div className='xd'>
+          <div key={el.id} className='xd'>
        <div className='img-details'>
           <img src={el.image} alt={el.name} />
         </div>
@@ -40,7 +41,7 @@ const Details = (props) => {
         ))
        }
         </div>
-        <BtnPersonaje side={"skip"}/>
+        <BtnPersonaje details={"details/"} page={page} setPage={setPage} numPages={params} side={"skip"}/>
     </ContainerDetails>
    )
   

@@ -6,11 +6,11 @@ export const ContainerDetails = styled.div`
   align-items: center;
   height: calc(100vh - 50px);
   .flex-details {
+    margin-right: 30px;
     width: 801px;
     height: 346px;
-    background: #212121;
- box-shadow: 15px 15px 30px rgb(25, 25, 25),
-             -4px 4px 5px black;
+    background: rgba(0, 0, 0, 0.47);
+backdrop-filter: blur(25px);
     border-radius: 15px;
     padding: 80px;
     display: flex;

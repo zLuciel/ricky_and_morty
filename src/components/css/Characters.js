@@ -17,7 +17,7 @@ export const ContainerCharacters = styled.div`
  display: grid;
  grid-template-columns: repeat(auto-fill,minmax(210px,1fr));
  row-gap: 40px;
- column-gap: 0px;
+ column-gap: 20px;
  }
  .flex-filter{
    width: 1400px;

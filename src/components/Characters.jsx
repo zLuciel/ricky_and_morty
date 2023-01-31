@@ -52,8 +52,8 @@ return <Loading/>
         ))}
       </div>
      <div className="btn-page">
-     {params.pages !== "1" && <BtnPersonaje page={page} numPages={params} setPage={setPage} side={"back"} />}
-     <BtnPersonaje page={page} numPages={params} setPage={setPage} side={"skip"} />
+     {params.pages !== "1" && <BtnPersonaje page={page} numPages={params.pages} setPage={setPage} side={"back"} />}
+     <BtnPersonaje details={""} page={page} numPages={params} setPage={setPage} side={"skip"} />
      </div>
     </ContainerCharacters>
   );
