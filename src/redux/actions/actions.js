@@ -1,4 +1,4 @@
-import { GET_CHARACTERS, GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH } from "../actions-types/action-types";
+import { GET_CHARACTERS, GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH, ADD_FAVORITE } from "../actions-types/action-types";
 const URL = "https://rickandmortyapi.com/api/character"
 
 
@@ -10,6 +10,7 @@ export const getCharacters = (num) => {
     .then(data => dispatch({type:GET_CHARACTERS,payload:data}));
   };
 };
+
 export const getCharacter = (id) => {
   return function (dispatch) {
     fetch(`${URL}/${id}`)
@@ -35,3 +36,10 @@ export const getSearch = (num,query,value) => {
     .then(data => dispatch({type:GET_SEARCH,payload:data.results}));
   };
 };
+
+export const addFavorite = (id)=>{
+  return {
+    type:ADD_FAVORITE,
+    payload:id
+  }
+}

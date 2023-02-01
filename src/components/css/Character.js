@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const ContainerCharacter = styled.div`
- border: 2px solid greenyellow;
+ /*border: 2px solid greenyellow;*/
+ /*border: 2px solid  yellow;*/
   overflow: hidden;
   background: #212121;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -48,5 +49,24 @@ export const ContainerCharacter = styled.div`
     height: 28px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+  }
+  .favorite{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 35px;
+    height: 18px;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    background: rgba(0, 0, 0, 0.56);
+    backdrop-filter: blur(25px);
+   :hover{
+    color:greenyellow;
+   }
   }
 `;

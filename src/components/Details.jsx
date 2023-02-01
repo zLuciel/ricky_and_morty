@@ -1,18 +1,18 @@
-import React, { useEffect,useState} from 'react'
-import { useParams } from 'react-router-dom'
+import { useEffect} from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getCharacter } from '../redux/actions/actions'
-import { connect } from 'react-redux'
 import { ContainerDetails } from './css/Details'
-import {BtnPersonaje} from "./Button/BtnPersonaje"
-const Details = (props) => {
+//**redux */
+import { useDispatch,useSelector } from 'react-redux'
+const Details = () => {
 
  const params = useParams()
-
- const [page, setPage] = useState(Number(params.details));
+ const navigate = useNavigate()
+ const dispatch = useDispatch()
+ const character = useSelector((state)=> state.character)
  useEffect(()=>{
   /* props.getCharacters(Number(params.details))*/
-   props.getCharacter(Number(params.details))
-
+   dispatch(getCharacter(Number(params.details))) 
  // eslint-disable-next-line react-hooks/exhaustive-deps
  },[params.details])
  
@@ -21,10 +21,9 @@ const Details = (props) => {
     <ContainerDetails>
       <h1>Details Characters</h1>
       <div className='flex-container-details'>
-      <BtnPersonaje details={"details/"} page={page} setPage={setPage} numPages={params} side={"back"} />
         <div className='flex-details'>
        {
-        props.character.map(el=> (
+        character.map(el=> (
           <div key={el.id} className='xd'>
        <div className='img-details'>
           <img src={el.image} alt={el.name} />
@@ -44,23 +43,12 @@ const Details = (props) => {
         ))
        }
         </div>
-        <BtnPersonaje details={"details/"} page={page} setPage={setPage} numPages={params} side={"skip"}/>
+       {/* <BtnPersonaje details={"details/"} type={params.type+"/"} page={page} setPage={setPage} numPages={params} side={"skip"}/>*/}
         </div>
-        <button className='return-details'>Return</button>
+        <button onClick={()=>navigate("/personajes/1")}>regresar</button>
     </ContainerDetails>
    )
   
 }
 
-const mapStateToProps = (state) => {
-    return {
-      character: state.character,
-    };
-  };
-  const mapDispatchToProps = (dispatch) => {
-    return {
-     /* getCharacters:(num)=>dispatch(getCharacters(num)),*/
-      getCharacter: (id) => dispatch(getCharacter(id)),
-    };
-  };
-  export default connect(mapStateToProps, mapDispatchToProps)(Details);
+  export default Details;

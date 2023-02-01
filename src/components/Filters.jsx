@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { ContainerFilters } from './css/Filters'
 import { MdArrowDropDown } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 const Filters = ({setGender,lis,setQuery,name}) => {
   const [mostrar, setMostrar] = useState(false);
-
   const opciones = () => {
     mostrar === false ? setMostrar(true) : setMostrar(false);
   };

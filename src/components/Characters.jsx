@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import {useDispatch,useSelector } from "react-redux";
 import {  useNavigate, useParams } from "react-router-dom";
 import { getCharacters, getGender } from "../redux/actions/actions";
 
@@ -10,26 +10,29 @@ import {Gender,Species,Status} from "../json/FilterLi"
 import Loading from "./Loading";
 import  {BtnPersonaje}  from "./Button/BtnPersonaje";
 
-const Characters = (props) => {
+const Characters = () => {
+  
   const params = useParams();
   const [page, setPage] = useState(Number(params.pages));
-  const [gender,setGender] = useState("")
+  const [gender,setGender] = useState("all")
   const [query,setQuery] = useState("")
   const navigate = useNavigate()
-
+  const dispatch = useDispatch()
+  const characters = useSelector((state)=> state.characters)
+  const totalPages = useSelector((state)=> state.totalPages)
   
+  console.log(characters);
   useEffect(() => {
-    if(props.totalPages === null){
+    if(totalPages === null){
     setPage(0)
     navigate(`/personajes/${page + 1}`)
   }
-    gender !== "" ? props.getGender(page,query,gender) :props.getCharacters(page);
+    gender !== "" ? dispatch(getGender(page,query,gender)) :  dispatch(getCharacters(page));
     // eslint-disable-next-line react-hooks/exhaustive-deps  
   }, [page,gender,query]);
 
 
-
-if(props.characters.length === 0){
+if(characters.length === 0){
 return <Loading/> 
 }
 
@@ -42,8 +45,9 @@ return <Loading/>
       <Filters lis={Status} name={"status"} setQuery={setQuery} setGender={setGender} />
       </div>
         <div className="grid-characters">
-       {  props.characters.results.map((el) => (
+       {characters.map((el) => (
           <Character
+            type={gender}
             key={el.id}
             name={el.name}
             img={el.image}
@@ -54,25 +58,12 @@ return <Loading/>
         ))}
       </div>
      <div className="btn-page">
-     {params.pages !== "1" && <BtnPersonaje details={""} page={page} numPages={params} setPage={setPage} side={"back"} />}
-     <BtnPersonaje details={""} page={page} numPages={params} setPage={setPage} side={"skip"} />
+     {params.pages !== "1" && <BtnPersonaje type={""}  details={""} page={page} numPages={params} setPage={setPage} side={"back"} />}
+     <BtnPersonaje details={""} type={""} page={page} numPages={params} setPage={setPage} side={"skip"} />
      </div>
     </ContainerCharacters>
   );
 };
 
 
-
-const mapStateToProps = (state) => {
-  return {
-    characters: state.characters,
-    totalPages:state.totalPages
-  };
-};
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getCharacters: (num) => dispatch(getCharacters(num)),
-    getGender: (num,query,value) => dispatch(getGender(num,query,value))
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(Characters);
+export default Characters;

@@ -1,17 +1,26 @@
-
+import { BsFillSuitHeartFill } from 'react-icons/bs';
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { ContainerCharacter } from './css/Character'
-
-const Character = ({img,name,species,gender,id}) => {
+import { useDispatch } from 'react-redux';
+import {addFavorite} from "../redux/actions/actions"
+const Character = ({img,name,species,gender,id,type}) => {
   const [infoView,setInfoView] = useState(false)
   const Mostrar = ()=> setInfoView(true)
   const Ocultar = ()=> setInfoView(false)
+  const dispatch = useDispatch()
+
+  const handleAdd = ()=>{
+     dispatch(addFavorite(id))
+  }
+
+
   return (
     <ContainerCharacter infoView={infoView} onMouseOver={Mostrar}  onMouseOut={Ocultar}>
-      <div className='img-card'>
+       <div className='img-card'>
         <img src={img} alt={name} />
-        <NavLink to={"/personajes/details/"+id}>
+        <button onClick={handleAdd} className='favorite'><BsFillSuitHeartFill/></button>
+        <NavLink to={type.length === 0 ? `/personajes/details/${"all"}/${id}`:`/personajes/details/${type}/${id}`}>
           <button className='btn-card-id'>Information</button>
         </NavLink>
       </div>

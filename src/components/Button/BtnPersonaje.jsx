@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {BtnPersonajePage}  from "../css/BtnPersonaje"
 
 
-export const BtnPersonaje = ({side,page,numPages,setPage,details}) => {
+export const BtnPersonaje = ({side,page,numPages,setPage,details,type}) => {
 
     const navigate = useNavigate()
     const current = useParams()
@@ -12,10 +12,10 @@ export const BtnPersonaje = ({side,page,numPages,setPage,details}) => {
         window.scroll(0, 0); 
        if(side ==="back") {
         setPage(Number(numPages[Location]) - 1)
-        navigate(`/personajes/${details}${page - 1}`)
+        navigate(`/personajes/${details}${type}${page - 1}`)
        }else{ 
-         setPage(Number(numPages[Location]) + 1)
-        navigate(`/personajes/${details}${page + 1}`)
+         setPage(Number(current[Location]) + 1)
+        navigate(`/personajes/${details}${type}${page + 1}`)
        }
     }
 
