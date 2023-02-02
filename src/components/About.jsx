@@ -11,8 +11,8 @@ const About = () => {
             hola soy <br /><b>Emmanuel Abregú</b>
           </h1>
           <p>
-            Futuro Desarollador full stack gracias por tomarte el tiempo de ver
-            mi pagina web espero te haya gustado nos vemos en el M3{" "}
+            Futuro Desarollador full stack, gracias por tomarte el tiempo de ver
+            mi pagina web y espero te haya gustado nos vemos en el M3{" "}
           </p>
           <Redes/>
         </div>
