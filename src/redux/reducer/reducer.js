@@ -1,5 +1,5 @@
 
-import { GET_CHARACTERS, GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH, ADD_FAVORITE } from "../actions-types/action-types";
+import { GET_CHARACTERS, GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH, CONNECT_LOGIN } from "../actions-types/action-types";
  /*const ID = state.users.find(user => user.id === action.payload)*/
     //const indexs = state.users.indexOf(action.payload)
     //const xdd = state.users.splice(state.users.indexOf(action.payload),1)
@@ -8,7 +8,8 @@ const initialState = {
     character:[],
     searchCharacters:[],
     favorite:[],
-    totalPages:""
+    totalPages:"",
+    connect:false
 }
 
 const reducer = (state = initialState, action)=>{
@@ -33,12 +34,10 @@ const reducer = (state = initialState, action)=>{
         ...state,
         searchCharacters: action.payload
     }
-    case ADD_FAVORITE:
-    const add = state.characters.filter(el => el.id === action.payload) //filtrar el id y si es true en favorite
+    case CONNECT_LOGIN:
     return {
         ...state,
-        favorite: [...state.favorite,...add]
-        //favorite: state.characters
+        connect: action.payload
     }
     default:
         return {...state}

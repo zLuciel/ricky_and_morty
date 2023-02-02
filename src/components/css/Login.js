@@ -55,6 +55,9 @@ h1{
         border: none;
         outline: none;
         background: none;
+        ::placeholder{
+            color: #C1C1C1;
+        }
     }
 }
 .btn-ingresar{
@@ -63,8 +66,8 @@ h1{
     cursor: pointer;
     background: greenyellow;
     border-radius: 20px;
-    width: 200px;
-    height: 40px;
+    width: 120px;
+    height: 30px;
     margin-bottom:20px
 }
 .login-con{

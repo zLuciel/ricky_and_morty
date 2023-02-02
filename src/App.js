@@ -3,7 +3,6 @@ import Main from "./components/Main";
 import  Nav  from "./components/Nav";
 import Characters from "./components/Characters";
 import Details from "./components/Details";
-import { Favorite } from "./components/Favorite";
 import Login from "./components/Login";
 //pathname = /
 function App() {
@@ -16,7 +15,6 @@ function App() {
     <Route path="/" element={<Login/>} />
     <Route path="/home" element={<Main/>} />
     <Route path="/personajes/:pages" element={<Characters/>} />
-    <Route path="/personajes/favorite" element={<Favorite/>} />
     <Route path="/personajes/details/:type/:details" element={<Details/>} />
     <Route path="*" element={<Main/>} />
    </Routes>
