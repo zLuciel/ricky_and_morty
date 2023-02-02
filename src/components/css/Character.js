@@ -51,11 +51,10 @@ export const ContainerCharacter = styled.div`
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
   }
-  .favorite{
+  .favorite,.addFavorite{
     padding: 10px;
     font-size: 0.8rem;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     color: white;
     border: none;
@@ -64,13 +63,24 @@ export const ContainerCharacter = styled.div`
     width: max-content;
     height: 20px;
     position: absolute;
-    top: 3px;
-    left: 4px;
     background: rgba(0, 0, 0, 0.56);
     backdrop-filter: blur(25px);
     .icon-live{
       margin-left: 5px;
       color: ${({status}) => status === "Alive" ? "greenyellow":status === "unknown"? "#00F0FF" : "#FFB800"};
     }
+  }
+  .favorite{
+    justify-content: space-evenly;
+    top: 3px;
+    left: 4px;
+  }
+  .addFavorite{
+    cursor: pointer;
+    color: white;
+    justify-content: center;
+    position: absolute;
+    top: 3px;
+    right: 5px;
   }
 `;

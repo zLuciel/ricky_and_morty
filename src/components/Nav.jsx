@@ -5,19 +5,19 @@ import Search  from "./Search";
 
 const Nav = () => {
   const navigate = useNavigate()
-  const store =localStorage.getItem("login")
+
   const handleLogOut= ()=>{
-      if(store){
-        localStorage.setItem("login",false)
-      }
+      localStorage.setItem("login",false)
+      navigate("/")
   }
-  useEffect(()=>{
-    if(store === false) {
+  
+  /*useEffect(()=>{
+    if(localStorage.getItem("login") === true) {
       navigate("/");
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
-  
+  },[localStorage.getItem("login")])
+ console.log(localStorage.getItem("login"));*/
   return (
     <Cabezera>
       <div className="container-flex-header">
@@ -29,6 +29,12 @@ const Nav = () => {
             </li>
             <li>
               <NavLink to={`/personajes/1`} className="link">Characters</NavLink>
+            </li>
+            <li>
+              <NavLink to={`/personajes/1`} className="link">Abaout</NavLink>
+            </li>
+            <li>
+              <NavLink to={`/personajes/favorite`} className="link">Favorite</NavLink>
             </li>
             <li>
             <NavLink onClick={handleLogOut} className="link" to="/">Log out</NavLink>

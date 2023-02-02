@@ -1,14 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ContainerMain, FlexMain } from "./css/Main";
 import RickyAndMorty from "../assets/main.png";
 import VideoMain from "../assets/videoRyck.mp4"
-import { NavLink, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const Main = () => {
-
-
-
   return (
     <ContainerMain>
       <FlexMain>

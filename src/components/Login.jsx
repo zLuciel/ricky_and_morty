@@ -15,7 +15,7 @@ const Login = () => {
   const [error, setError] = useState(false);
 
   const handleView = () => (!mostrar ? setMostrar(true) : setMostrar(false));
-
+  const store =localStorage.getItem("login")
   const handleConnect = () => {
     if (password === "invitado@gmail.com" && gmail === "invitado@") {
       localStorage.setItem("login",true)
@@ -24,8 +24,11 @@ const Login = () => {
       setError(true);
     }
   };
- 
-
+ useEffect(()=>{
+   if(store === true) navigate("/home")
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+ },[store])
+console.log(store);
   return (
     <LoginContainerFlex>
       <LoginAnime>

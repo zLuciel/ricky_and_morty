@@ -1,4 +1,4 @@
-import { GET_CHARACTERS, GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH, CONNECT_LOGIN } from "../actions-types/action-types";
+import { GET_CHARACTERS, GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH, ADD_FAVORITE, DELETE } from "../actions-types/action-types";
 const URL = "https://rickandmortyapi.com/api/character"
 
 
@@ -35,9 +35,15 @@ export const getSearch = (num,query,value) => {
   };
 };
 
-export const connectLogin = (bolean)=>{
+export const addFavorite = (id)=>{
   return {
-    type:CONNECT_LOGIN,
-    payload:bolean
+    type:ADD_FAVORITE,
+    payload:id
+  }
+}
+export const Delete = (id)=>{
+  return {
+    type:DELETE,
+    payload:id
   }
 }
