@@ -31,7 +31,7 @@ const Nav = () => {
               <NavLink to={`/personajes/1`} className="link">Characters</NavLink>
             </li>
             <li>
-              <NavLink to={`/personajes/1`} className="link">Abaout</NavLink>
+              <NavLink to={`/personajes/1`} className="link">About</NavLink>
             </li>
             <li>
               <NavLink to={`/personajes/favorite`} className="link">Favorite</NavLink>

@@ -7,8 +7,8 @@ export const ContainerCharacters = styled.div`
  align-items: center;
  h1{
     font-size: 5rem;
-    line-height: 2;
-    margin-bottom: 18px;
+    line-height: 3;
+    color: greenyellow;
  }
  
  .flex-filter{

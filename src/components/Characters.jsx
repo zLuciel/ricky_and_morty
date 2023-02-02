@@ -38,7 +38,7 @@ return <Loading/>
 }
   return (
     <ContainerCharacters>
-      <h1>Personajes</h1>
+      <h1>Characters</h1>
       <div className="flex-filter">
       <Filters lis={Species} name={"species"} setQuery={setQuery} setGender={setGender}/>
       <Filters lis={Gender} name={"gender"} setQuery={setQuery} setGender={setGender}/>
