@@ -5,6 +5,7 @@ import Characters from "./components/Characters";
 import Details from "./components/Details";
 import Login from "./components/Login";
 import { Favorite } from "./components/Favorite";
+import About from "./components/About";
 //pathname = /
 function App() {
   const location = useLocation()
@@ -15,6 +16,7 @@ function App() {
    <Routes>
     <Route path="/" element={<Login/>} />
     <Route path="/home" element={<Main/>} />
+    <Route path="/about" element={<About/>} />
     <Route path="/personajes/favorite" element={<Favorite/>} />
     <Route path="/personajes/:pages" element={<Characters/>} />
     <Route path="/personajes/details/:type/:details" element={<Details/>} />

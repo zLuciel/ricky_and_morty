@@ -82,5 +82,8 @@ export const ContainerCharacter = styled.div`
     position: absolute;
     top: 3px;
     right: 5px;
+    :hover{
+      color: greenyellow;
+    }
   }
 `;
