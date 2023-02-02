@@ -21,7 +21,6 @@ const Characters = () => {
   const characters = useSelector((state)=> state.characters)
   const totalPages = useSelector((state)=> state.totalPages)
   
-  console.log(characters);
   useEffect(() => {
     if(totalPages === null){
     setPage(0)
@@ -47,6 +46,7 @@ return <Loading/>
         <div className="grid-characters">
        {characters.map((el) => (
           <Character
+            status={el.status}
             type={gender}
             key={el.id}
             name={el.name}

@@ -18,9 +18,7 @@ export const getCharacter = (id) => {
     .then(data => dispatch({type:GET_CHARACTER,payload:data}));
   };
 };
-/*export const getCharacter = (id) => {
-  return {type:GET_CHARACTER,payload:id}
-};*/
+
 export const getGender = (num,query,value) => {
   return function (dispatch) {
     fetch(`${URL}/?page=${num}&${query}=${value}`)

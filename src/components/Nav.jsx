@@ -4,6 +4,7 @@ import { Cabezera, ContainerNav } from "./css/Nav";
 import Search  from "./Search";
 
 const Nav = () => {
+
   return (
     <Cabezera>
       <div className="container-flex-header">
@@ -11,7 +12,7 @@ const Nav = () => {
         <ContainerNav>
           <ul>
             <li>
-              <NavLink className="link" to="/">Home</NavLink>
+              <NavLink className="link" to="/home">Home</NavLink>
             </li>
             <li>
               <NavLink to={`/personajes/1`} className="link">Characters</NavLink>

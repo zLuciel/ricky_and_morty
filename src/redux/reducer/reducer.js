@@ -13,10 +13,12 @@ const initialState = {
 
 const reducer = (state = initialState, action)=>{
   switch (action.type) {
-    case GET_CHARACTERS: return {
+      case GET_CHARACTERS: 
+      
+      return {
         ...state,
         totalPages:action.payload.info.next,
-        characters: action.payload
+        characters: action.payload.results
     }
     case GET_CHARACTER: return {
         ...state,
@@ -32,9 +34,7 @@ const reducer = (state = initialState, action)=>{
         searchCharacters: action.payload
     }
     case ADD_FAVORITE:
-    const add = state.characters.filter(el => el.id === action.payload)
-    //console.log(state.character);
-  
+    const add = state.characters.filter(el => el.id === action.payload) //filtrar el id y si es true en favorite
     return {
         ...state,
         favorite: [...state.favorite,...add]

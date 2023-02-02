@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerCharacter = styled.div`
  /*border: 2px solid greenyellow;*/
  /*border: 2px solid  yellow;*/
+ //border:${({status}) => status === "Alive" ? "3px solid greenyellow":status === "unknown"? " 3px solid #00F0FF" : " 3px solid #FFB800"};
   overflow: hidden;
   background: #212121;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -36,7 +37,7 @@ export const ContainerCharacter = styled.div`
     }
   }
   .btn-card-id {
-    display: ${props => props.infoView ? "block" : "none"};;
+    display: ${props => props.infoView ? "block" : "none"};
     color: white;
     cursor: pointer;
     border: none;
@@ -51,22 +52,25 @@ export const ContainerCharacter = styled.div`
     border-top-right-radius: 4px;
   }
   .favorite{
-    cursor: pointer;
+    padding: 10px;
+    font-size: 0.8rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: white;
     border: none;
     border-radius: 50px;
-    width: 35px;
-    height: 18px;
+    /*width: 35px;*/
+    width: max-content;
+    height: 20px;
     position: absolute;
     top: 3px;
     left: 4px;
     background: rgba(0, 0, 0, 0.56);
     backdrop-filter: blur(25px);
-   :hover{
-    color:greenyellow;
-   }
+    .icon-live{
+      margin-left: 5px;
+      color: ${({status}) => status === "Alive" ? "greenyellow":status === "unknown"? "#00F0FF" : "#FFB800"};
+    }
   }
 `;
