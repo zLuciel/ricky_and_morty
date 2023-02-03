@@ -27,6 +27,8 @@ export const ContainerCharacter = styled.div`
     position: relative;
     overflow: hidden;
     height: 180px;
+    width: 100%;
+    background: url("https://blog.teamtreehouse.com/wp-content/uploads/2015/05/loading.gif") 50% no-repeat;
     img {
       width: 100%;
       height: 100%;
