@@ -22,7 +22,7 @@ const Characters = () => {
   
   const characters = useSelector((state)=> state.characters)
   const totalPages = useSelector((state)=> state.totalPages)
-  
+
   useEffect(() => {
     if(totalPages === null){
     setPage(0)
@@ -31,7 +31,6 @@ const Characters = () => {
     gender !== "" ? dispatch(getGender(page,query,gender)) :  dispatch(getCharacters(page));
     // eslint-disable-next-line react-hooks/exhaustive-deps  
   }, [page,gender,query]);
-
 
 if(characters.length === 0){
 return <Loading/> 

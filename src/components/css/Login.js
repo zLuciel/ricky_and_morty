@@ -22,6 +22,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 h1{
+    margin-bottom: 22px;
     b{
         color: greenyellow;
     }
@@ -61,6 +62,7 @@ h1{
     }
 }
 .btn-ingresar{
+    border: none;
     font-weight: 500;
     font-size: 1rem;
     cursor: pointer;
@@ -68,7 +70,7 @@ h1{
     border-radius: 20px;
     width: 120px;
     height: 30px;
-    margin-bottom:20px
+    margin-bottom:20px;
 }
 .login-con{
     margin-bottom:20px;

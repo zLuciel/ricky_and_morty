@@ -1,6 +1,4 @@
 import { BsFillSuitHeartFill } from "react-icons/bs";
-import { ImHeartBroken } from "react-icons/im";
-import { BiGhost } from "react-icons/bi";
 import { TiDelete } from "react-icons/ti";
 
 import { useState } from "react";
@@ -8,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { ContainerCharacter } from "./css/Character";
 import { useDispatch } from "react-redux";
 import { addFavorite, Delete } from "../redux/actions/actions";
-
+import StatusCard from "./StatusCard";
 const Character = ({
   img,
   name,
@@ -34,6 +32,7 @@ const Character = ({
     >
       <div className="img-card">
         <img  src={img} alt={name} />
+
         <span onClick={handleAddFavorite} className="addFavorite">
           <BsFillSuitHeartFill />
         </span>
@@ -42,16 +41,7 @@ const Character = ({
             <TiDelete />
           </span>
         )}
-        <span className="favorite">
-          {status}{" "}
-          {status === "Alive" ? (
-            <BsFillSuitHeartFill className="icon-live" />
-          ) : status === "unknown" ? (
-            <BiGhost className="icon-live" />
-          ) : (
-            <ImHeartBroken className="icon-live" />
-          )}
-        </span>
+        <StatusCard status={status}/>
         <NavLink
           to={
             type.length === 0
