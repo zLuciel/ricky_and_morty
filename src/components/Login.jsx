@@ -64,10 +64,10 @@ console.log(store);
         {mostrar && (
           <div>
             <p>
-              <b>Password</b>: invitado@
+            <b>Gmail</b>: invitado@gmail.com
             </p>
             <p>
-              <b>Gmail</b>: invitado@gmail.com
+            <b>Password</b>: invitado@
             </p>
           </div>
         )}

@@ -22,6 +22,12 @@ export const ContainerCharacter = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h2{
+      text-overflow: ellipsis;
+      height: 38px;
+      overflow: hidden;
+      white-space: wrap;
+    }
   }
   .img-card {
     position: relative;

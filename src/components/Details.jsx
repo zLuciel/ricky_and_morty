@@ -1,13 +1,13 @@
 import { useEffect} from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { getCharacter } from '../redux/actions/actions'
 import { ContainerDetails } from './css/Details'
 //**redux */
 import { useDispatch,useSelector } from 'react-redux'
+import BtnDetails from './Button/BtnDetails'
 const Details = () => {
 
  const params = useParams()
- const navigate = useNavigate()
  const dispatch = useDispatch()
  const character = useSelector((state)=> state.character)
  useEffect(()=>{
@@ -43,9 +43,11 @@ const Details = () => {
         ))
        }
         </div>
-       {/* <BtnPersonaje details={"details/"} type={params.type+"/"} page={page} setPage={setPage} numPages={params} side={"skip"}/>*/}
         </div>
-        <button onClick={()=>navigate("/personajes/1")}>regresar</button>
+        <div style={{width:"100px",height:"32px"}}>
+        <BtnDetails side={"back"} ruta={"/personajes/1"}/>
+        </div>
+        
     </ContainerDetails>
    )
   
