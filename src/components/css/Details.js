@@ -5,7 +5,7 @@ export const ContainerDetails = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 80px);
   row-gap: 50px;
   .return-details{
     cursor: pointer;

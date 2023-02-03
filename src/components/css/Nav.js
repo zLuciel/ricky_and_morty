@@ -10,7 +10,7 @@ width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 80px;
     @media screen and (max-width: 1593px){
     width: 95%;
    }
@@ -27,6 +27,10 @@ ul{
     color: white;
     text-decoration: none;
     :hover{
+        color: greenyellow;
+    }
+    .icon-login{
+        font-size: 1.4rem;
         color: greenyellow;
     }
 }

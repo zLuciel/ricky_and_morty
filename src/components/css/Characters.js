@@ -7,7 +7,7 @@ export const ContainerCharacters = styled.div`
  align-items: center;
  h1{
     font-size: 5rem;
-    line-height: 3;
+    line-height: 2;
     color: greenyellow;
  }
  
