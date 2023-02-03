@@ -8,7 +8,6 @@ flex-direction: column;
 height: max-content;
 h1{
     font-size: 5rem;
-    
     line-height:3;
     color: greenyellow;
 }

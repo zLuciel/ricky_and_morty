@@ -15,7 +15,7 @@ export const Favorite = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "93vh",
+          height: "90vh",
         }}
       >
         Add your favorite characters
