@@ -17,7 +17,7 @@ const Login = () => {
   const handleView = () => (!mostrar ? setMostrar(true) : setMostrar(false));
   const store =localStorage.getItem("login")
   const handleConnect = () => {
-    if (password === "invitado@gmail.com" && gmail === "invitado@") {
+    if (password === "invitado@" && gmail ==="invitado@gmail.com") {
       localStorage.setItem("login",true)
       navigate("/home")
     } else {
