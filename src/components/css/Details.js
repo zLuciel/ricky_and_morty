@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerDetails = styled.div`
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,16 +22,37 @@ export const ContainerDetails = styled.div`
   align-items: center;
   }
   .flex-details {
-    margin-right: 30px;
     width: 801px;
     height: 346px;
     background: rgba(0, 0, 0, 0.47);
-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     border-radius: 15px;
-    padding: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    //*Responsive */
+    @media screen and (max-width: 896px){
+      width: 550px;
+      height: max-content;
+      .xd{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    }
+    @media screen and (max-width: 706px){
+      width: 450px;
+      height: max-content;
+      .xd{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    }
+    @media screen and (max-width: 506px){
+      width: 300px;
+    }
   }
   .xd{
     width: 650px;
@@ -41,9 +63,19 @@ backdrop-filter: blur(25px);
     width: 285px;
     height: 265px;
     border-radius: 10px;
+    //**Responsive */
+    @media screen and (max-width: 896px){
+      width: 250px;
+      height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
   }
   .info-details{
-    width: 400px;
     h1{
         text-align: center;
         color: greenyellow;
@@ -63,6 +95,24 @@ backdrop-filter: blur(25px);
             margin-right:  8px;
         }
         margin: 0 40px;
+    }
+    //**Responsive */
+    @media screen and (max-width: 896px){
+      width: max-content;
+      h1{
+        line-height: 2.5;
+      }
+      div{
+        padding: 0;
+      }
+    }
+    @media screen and (max-width: 706px){
+      h1{
+        line-height: 2.5;
+      }
+    }
+    @media screen and (max-width: 506px){
+      width: 340px;
     }
   }
 `;
