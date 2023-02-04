@@ -36,3 +36,24 @@
 .icon-redes > li > ul:hover{
     transform: scale(1.2);
 }
+
+/**Resposnvie*/
+@media screen and (max-width: 1187px){
+    .icon-redes{
+        margin: 40px  0;
+        white-space: wrap;
+    } 
+}
+@media screen and (max-width: 628px){
+    .icon-redes > li {
+        width: 180px;
+        column-gap: 10px;
+    }
+    .icon-redes > li > ul{
+        font-size: 1.5rem;
+    }
+    .icon-redes{
+        margin: 20px  0;
+        white-space: wrap;
+    }
+}
