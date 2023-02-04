@@ -12,7 +12,11 @@ export const ContainerCharacter = styled.div`
   text-align: center;
   width: 220px;
   height: 300px;
-  
+  //**Responsive */
+  @media screen and (max-width: 514px){
+   width: 150px;
+   height: 190px;
+  }
   h2 {
     color: greenyellow;
   }
@@ -28,6 +32,16 @@ export const ContainerCharacter = styled.div`
       overflow: hidden;
       white-space: wrap;
     }
+  @media screen and (max-width: 514px){
+    height: calc(100% - 100px);
+    h2{
+      font-size: 1rem;
+      height: max-content;
+    }
+    p{
+      font-size: 0.8rem;
+    }
+  }
   }
   .img-card {
     position: relative;
@@ -43,6 +57,11 @@ export const ContainerCharacter = styled.div`
     img:hover {
       transform: scale(1.2);
     }
+  //**Responsive */
+  @media screen and (max-width: 514px){
+   width: 150px;
+   height: 100px;
+  }
   }
   .btn-card-id {
     display: ${props => props.infoView ? "block" : "none"};

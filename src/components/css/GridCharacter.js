@@ -5,9 +5,12 @@ export const GridCharacter = styled.div`
  width: 1400px;
  /*width: 1210px;*/
  display: grid;
+ place-items: center;
  grid-template-columns: repeat(auto-fill,minmax(210px,1fr));
  row-gap: 40px;
  column-gap: 20px;
+
+ //**Responsive */
  @media screen and (max-width: 1476px){
   width: 80%;
  }
@@ -15,13 +18,20 @@ export const GridCharacter = styled.div`
   width: 90%;
   grid-template-columns: repeat(auto-fill,minmax(215px,1fr));
  }
- @media screen and (max-width: 776px){
-  width: 80%;
-  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+ @media screen and (max-width: 1298px){
+  width: 992px;
+  grid-template-columns: repeat(auto-fill,minmax(215px,1fr));
  }
- @media screen and (max-width: 590px){
-  width: 50%;
-  grid-template-columns: repeat(1,minmax(300px,1fr));
+ @media screen and (max-width: 1100px){
+  width: 666px;
+  grid-template-columns: repeat(auto-fill,minmax(208px,1fr));
  }
-
+ @media screen and (max-width: 768px){
+  width: 450px;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+ }
+ @media screen and (max-width: 514px){
+ width: 320px;
+  grid-template-columns: repeat(auto-fill,minmax(135px,1fr));
+ }
 `

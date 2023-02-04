@@ -17,8 +17,7 @@ export const ContainerCharacters = styled.div`
    align-items: center;
    gap: 10px;
    @media screen and (max-width: 1476px){
-    width: 90%;
-  border: 1px solid red;
+  width: 90%;
  }
  }
  .btn-page{
