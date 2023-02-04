@@ -24,7 +24,7 @@ const Filters = ({setGender,lis,setQuery,name}) => {
         </div>
         <ul className='options'>
           {
-            lis.map(li=>  <li onClick={handleAll} className='option'>{li}</li>)
+            lis.map((li,index)=>  <li key={index} onClick={handleAll} className='option'>{li}</li>)
           }
         </ul>
       </div>

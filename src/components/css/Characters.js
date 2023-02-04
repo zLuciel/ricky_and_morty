@@ -9,15 +9,35 @@ export const ContainerCharacters = styled.div`
     font-size: 5rem;
     line-height: 2;
     color: greenyellow;
+//**Responsive */
+@media screen and (max-width: 557px){
+ font-size: 3rem;
  }
- 
+ }
+ //1477
  .flex-filter{
    width: 1400px;
    display: flex;
    align-items: center;
    gap: 10px;
-   @media screen and (max-width: 1476px){
-  width: 90%;
+//**Response */
+@media screen and (max-width: 1477px){
+  width: 80%;
+ }
+ @media screen and (max-width: 1428px){
+  width: 88%;
+ }
+ @media screen and (max-width: 1299px){
+  width: 992px;
+ }
+ @media screen and (max-width: 1100px){
+ width: 666px;
+ }
+ @media screen and (max-width: 769px){
+ width: 450px;
+ }
+ @media screen and (max-width: 514px){
+ width: 320px;
  }
  }
  .btn-page{
