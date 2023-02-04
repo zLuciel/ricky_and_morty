@@ -12,6 +12,9 @@ export const ContainerSearch = styled.div`
     justify-content: center;
     align-items: center;
     column-gap: 5px;
+    @media screen and (max-width: 1126px){
+    width: 300px;
+  }
   }
   .input-search > button {
     height: 20px;
@@ -40,11 +43,11 @@ export const ContainerSearch = styled.div`
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(25px);
     border-radius: 20px;
-    width: 400px;
+    width: 100%;
     max-height: 170px;
     height: max-content;
   }
-  @media screen and (max-width: 1074px){
-display: none;
-}
+ /* @media screen and (max-width: 902px){
+  display: none;
+}*/
 `;

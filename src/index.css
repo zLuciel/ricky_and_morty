@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  overflow: hidden;
   font-family: 'Jacques Francois';
   position: relative;
   color: white;
