@@ -28,7 +28,6 @@ const Login = () => {
    if(store === true) navigate("/home")
  // eslint-disable-next-line react-hooks/exhaustive-deps
  },[store])
-console.log(store);
   return (
     <LoginContainerFlex>
       <LoginAnime>

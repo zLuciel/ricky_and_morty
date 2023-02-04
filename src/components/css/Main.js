@@ -26,7 +26,7 @@ column-gap: 50px;
     }
     p{
         font-family: 'Istok Web';
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom:15px;
     }
     button{
