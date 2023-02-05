@@ -16,6 +16,7 @@ export const ContainerCharacters = styled.div`
  }
  //1477
  .flex-filter{
+   flex-wrap: wrap;
    width: 1400px;
    display: flex;
    align-items: center;

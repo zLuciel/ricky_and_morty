@@ -30,7 +30,9 @@ export const ContainerFilters = styled.div`
         position: absolute;
      }
     }
-   
+    @media screen and (max-width: 515px){
+     margin-bottom: 0;
+    }
   }
 
   .container-selector > ul {
