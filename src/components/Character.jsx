@@ -2,7 +2,7 @@ import { BsFillSuitHeartFill } from "react-icons/bs";
 import { TiDelete } from "react-icons/ti";
 
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ContainerCharacter } from "./css/Character";
 import { useDispatch } from "react-redux";
 import { addFavorite, Delete } from "../redux/actions/actions";
@@ -20,11 +20,15 @@ const Character = ({
   const [infoView, setInfoView] = useState(false);
   const Mostrar = () => setInfoView(true);
   const Ocultar = () => setInfoView(false);
+  const navigate = useNavigate()
   const distpacth = useDispatch();
   const handleAddFavorite = () => distpacth(addFavorite(id));
   const handleDelete = () => distpacth(Delete(id));
+  const handleNavigate = ()=>  type.length === 0 ? navigate(`/personajes/details/${"all"}/${id}`) : navigate(`/personajes/details/${type}/${id}`)
   return (
+
     <ContainerCharacter
+      onClick={handleNavigate}
       status={status}
       infoView={infoView}
       onMouseOver={Mostrar}
@@ -42,15 +46,7 @@ const Character = ({
           </span>
         )}
         <StatusCard status={status}/>
-        <NavLink
-          to={
-            type.length === 0
-              ? `/personajes/details/${"all"}/${id}`
-              : `/personajes/details/${type}/${id}`
-          }
-        >
           <button className="btn-card-id">#{id}</button>
-        </NavLink>
       </div>
       <div className="info-card">
         <h2>{name}</h2>

@@ -3,6 +3,7 @@ import { ContainerImg, ContainerInfoContador, ContainerInfoMain, ContainerMain }
 import RickVideo from "../assets/videoRyck.mp4"
 import {Redes} from "./Redes"
 import CountUp from 'react-countup'
+import { NavLink } from 'react-router-dom'
 
 const Main = () => {   
   return (
@@ -29,7 +30,7 @@ const Main = () => {
             <Redes />
           </div>
            <span className='info-img'>After being missing for almost 20 years, Rick Sanchez shows up unexpectedly on his daughter Beth's doorstep and moves in with her and her family, using the garage as his personal laboratory.</span>
-           <button>explore</button>
+           <NavLink to="/personajes/1" ><button>explore</button></NavLink> 
         </ContainerImg>
       </div>
 

@@ -25,7 +25,7 @@ export const Favorite = () => {
   }
   return (
     <ContainerFavorite>
-      <h1>Characters Favorite</h1>
+      <h1 className="titulo-favorite">Characters Favorite</h1>
       <GridCharacter>
         {
           /*favorite.map(el=> <div><p>{el.name}</p><img src={el.image} alt={el.name} /></div>)*/

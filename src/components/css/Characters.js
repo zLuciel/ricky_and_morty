@@ -6,7 +6,7 @@ export const ContainerCharacters = styled.div`
  justify-content: center;
  align-items: center;
  h1{
-    font-size: 5rem;
+    font-size: 3rem;
     line-height: 2;
     color: greenyellow;
 //**Responsive */

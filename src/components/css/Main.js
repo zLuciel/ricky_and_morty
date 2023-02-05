@@ -97,7 +97,7 @@ export const ContainerInfoContador = styled.div`
 position: relative;
 width: 427px;
 height: 70px;
-background: rgba(0, 0, 0, 0.55);
+background: rgba(0, 0, 0, 0.33);
 backdrop-filter: blur(12.5px);
 border-radius: 20px;
 display: flex;
@@ -193,6 +193,7 @@ animation: subir 1.8s infinite alternate ease-in-out;
     width: 90%;
 }
 button{
+    cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
     position: absolute;

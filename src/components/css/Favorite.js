@@ -6,9 +6,13 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 height: max-content;
-h1{
-    font-size: 5rem;
+.titulo-favorite{
+    font-size: 3rem;
     line-height:3;
     color: greenyellow;
+@media screen and (max-width: 1000px){
+ font-size: 2rem;
+ }
 }
+
 `
