@@ -28,7 +28,6 @@ const Character = ({
   return (
 
     <ContainerCharacter
-      onClick={handleNavigate}
       status={status}
       infoView={infoView}
       onMouseOver={Mostrar}
@@ -46,12 +45,12 @@ const Character = ({
           </span>
         )}
         <StatusCard status={status}/>
-          <button className="btn-card-id">#{id}</button>
+          <button onClick={handleNavigate} className="btn-card-id">#{id}</button>
       </div>
       <div className="info-card">
-        <h2>{name}</h2>
-        <p>{species}</p>
-        <p>{gender}</p>
+        <h2  onClick={handleNavigate}>{name}</h2>
+        <p  onClick={handleNavigate}>{species}</p>
+        <p  onClick={handleNavigate}>{gender}</p>
       </div>
     </ContainerCharacter>
   );
