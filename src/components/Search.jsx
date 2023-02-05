@@ -39,7 +39,7 @@ const Search = (props) => {
       </div>
       <div className="search-view">
         {!props.searchCharacters || search === ""
-          ? "No hay resultado"
+          ? <p style={{fontSize:"0.8rem"}}>No hay resultado</p>
           : props.searchCharacters.map((el) => (
               <CardSearch
                 key={el.id}

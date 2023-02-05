@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {useDispatch,useSelector } from "react-redux";
-import {  useNavigate, useParams } from "react-router-dom";
-import { getCharacters, getGender } from "../redux/actions/actions";
+import { useParams } from "react-router-dom";
+import { getGender } from "../redux/actions/actions";
 import {GridCharacter} from "./css/GridCharacter"
 import Character from "./Character";
 import { ContainerCharacters } from "./css/Characters";
@@ -12,7 +12,6 @@ import  {BtnPersonaje}  from "./Button/BtnPersonaje";
 
 
 const Characters = () => {
-  const navigate = useNavigate()
   const dispatch = useDispatch()
   const params = useParams();
   
@@ -22,15 +21,12 @@ const Characters = () => {
   
   const characters = useSelector((state)=> state.characters)
   const totalPages = useSelector((state)=> state.totalPages)
-
+  
   useEffect(() => {
-    if(totalPages === null){
-    setPage(0)
-    navigate(`/personajes/${page + 1}`)
-  }
-    gender !== "" ? dispatch(getGender(page,query,gender)) :  dispatch(getCharacters(page));
+     dispatch(getGender(page,query,gender)) 
     // eslint-disable-next-line react-hooks/exhaustive-deps  
   }, [page,gender,query]);
+
 
 if(characters.length === 0){
 return <Loading/> 
@@ -42,6 +38,7 @@ return <Loading/>
       <Filters lis={Species} name={"species"} setQuery={setQuery} setGender={setGender}/>
       <Filters lis={Gender} name={"gender"} setQuery={setQuery} setGender={setGender}/>
       <Filters lis={Status} name={"status"} setQuery={setQuery} setGender={setGender} />
+      <Filters lis={totalPages} name={"Pages"} setPage={setPage} />
       </div>
         <GridCharacter>
        {characters.map((el) => (

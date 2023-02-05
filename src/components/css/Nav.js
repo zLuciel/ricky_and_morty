@@ -42,7 +42,7 @@ ul{
     }
 }
 @media screen and (max-width: 902px){
-display:  ${props => props.mostrar ? "flex" : "none"};
+  display:  ${props => props.mostrar ? "flex" : "none"};
 ul{
     display:  ${props => props.mostrar ? "flex" : "none"};
     row-gap: 10px;

@@ -37,12 +37,14 @@ export const ContainerFilters = styled.div`
     display: ${(props) => (props.mostrar ? "flex" : "none")};
     flex-direction: column;
     row-gap: 5px;
-    padding: 10px 0;
+    padding: 10px 10px;
     border-radius: 10px;
     color: white;
     text-align: center;
     position: absolute;
     width: 100%;
+    height: ${(props) => (props.name === "Pages" ? "95px" : "max-content")};
+    overflow-y: ${(props) => (props.name === "Pages" ? "scroll" : "none")};
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     z-index: 500;

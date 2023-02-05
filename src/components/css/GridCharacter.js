@@ -7,7 +7,7 @@ export const GridCharacter = styled.div`
  display: grid;
  place-items: center;
  grid-template-columns: repeat(auto-fill,minmax(210px,1fr));
- row-gap: 40px;
+ row-gap: 20px;
  column-gap: 20px;
 
  //**Responsive */

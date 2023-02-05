@@ -10,14 +10,15 @@ html {
 }
 
 body {
-  overflow: hidden;
+ 
   font-family: 'Jacques Francois';
   position: relative;
   color: white;
   background: linear-gradient(90deg, #152331 0%, #000000 100%);
 }
 .portada{
-  opacity: 0.4;
+  /*opacity: 0.4;*/
+  opacity: 0.3;
   z-index: -1;
   filter: blur(5px);
   transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -25,5 +26,11 @@ body {
   top: 0;
   width: 100%;
   height: 100vh;
-  background:rgb(0, 0, 0) url("./assets/portada.jpg") center center/cover no-repeat;
+ /* background:rgb(0, 0, 0) url("./assets/portada.jpg") center center/cover no-repeat;*/
+  background:rgb(0, 0, 0) url("https://krot.info/uploads/posts/2020-01/1579541258_28-78.png") center center/cover no-repeat;
+  /*background:rgb(0, 0, 0) url("https://getwallpapers.com/wallpaper/full/4/e/2/964333-new-rick-and-morty-season-3-wallpapers-1920x1080.jpg") center center/cover no-repeat;*/
+  /*background:rgb(0, 0, 0) url("https://vignette.wikia.nocookie.net/rickandmorty/images/5/52/S2e3_love_connection_experience.png/revision/latest?cb=20160923073546") center center/cover no-repeat;
+
+
+  background:rgb(0, 0, 0) url("https://s3-prod.adage.com/s3fs-public/image0.png") center center/cover no-repeat;*/
 }

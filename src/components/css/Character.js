@@ -1,17 +1,27 @@
 import styled from "styled-components";
 
 export const ContainerCharacter = styled.div`
- /*border: 2px solid greenyellow;*/
- /*border: 2px solid  yellow;*/
- //border:${({status}) => status === "Alive" ? "3px solid greenyellow":status === "unknown"? " 3px solid #00F0FF" : " 3px solid #FFB800"};
+ //border: 2px solid greenyellow;
+// border: 2px solid  yellow;
+ //border:${({status}) => status === "Alive" ? "2px solid greenyellow":status === "unknown"? " 2px solid #00F0FF" : " 2px solid #FFB800"};
   overflow: hidden;
   background: #212121;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
              -4px 4px 5px black;
+
+             background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(0.5px);
   border-radius: 15px;
   text-align: center;
   width: 220px;
   height: 300px;
+  transition: transform 400ms ease;
+  :hover{
+    z-index: 80;
+    box-shadow: -2px 2px 20px black, 2px -2px 20px black;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
   //**Responsive */
   @media screen and (max-width: 514px){
    width: 150px;
@@ -52,11 +62,11 @@ export const ContainerCharacter = styled.div`
     img {
       width: 100%;
       height: 100%;
-      transition: transform 400ms;
+     // transition: transform 400ms;
     }
-    img:hover {
+   /* img:hover {
       transform: scale(1.2);
-    }
+    }*/
   //**Responsive */
   @media screen and (max-width: 514px){
    width: 150px;
@@ -65,11 +75,11 @@ export const ContainerCharacter = styled.div`
   }
   .btn-card-id {
     display: ${props => props.infoView ? "block" : "none"};
-    color: white;
+    color: greenyellow;
     cursor: pointer;
     border: none;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
     position: absolute;
     bottom: 0;
     left: 0;

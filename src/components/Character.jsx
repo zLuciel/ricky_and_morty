@@ -49,7 +49,7 @@ const Character = ({
               : `/personajes/details/${type}/${id}`
           }
         >
-          <button className="btn-card-id">Information</button>
+          <button className="btn-card-id">#{id}</button>
         </NavLink>
       </div>
       <div className="info-card">

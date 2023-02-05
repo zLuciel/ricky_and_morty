@@ -47,7 +47,7 @@ column-gap: 50px;
         border-radius: 10px;
         width: 500px;
         height: 280px;
-        background: gray;
+        background: none;
         video{
             width: 100%;
             height: 100%;

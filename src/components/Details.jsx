@@ -16,7 +16,7 @@ const Details = () => {
   useEffect(() => {
     dispatch(getCharacter(Number(params.details)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [params.details]);
+  }, []);
 
   return (
     <ContainerDetails>

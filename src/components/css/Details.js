@@ -24,8 +24,8 @@ export const ContainerDetails = styled.div`
   .flex-details {
     width: 801px;
     height: 346px;
-    background: rgba(0, 0, 0, 0.47);
-    backdrop-filter: blur(25px);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
     border-radius: 15px;
     display: flex;
     justify-content: center;
