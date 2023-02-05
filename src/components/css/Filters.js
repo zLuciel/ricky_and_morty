@@ -19,6 +19,9 @@ export const ContainerFilters = styled.div`
       border-radius: 50px;
       background: white;
       margin-bottom: 10px;
+      :hover{
+      background: #CCFF00;
+    }
     }
     .select-name {
        font-family: 'Bebas Neue';
@@ -51,6 +54,17 @@ export const ContainerFilters = styled.div`
     backdrop-filter: blur(5px);
     z-index: 500;
     list-style: none;
+  ::-webkit-scrollbar {
+    border-radius: 10px;
+  display: initial;
+  width: 6px;
+  height: 7px;
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: greenyellow;
+}
     li:hover {
       cursor: pointer;
       border-radius: 5px;

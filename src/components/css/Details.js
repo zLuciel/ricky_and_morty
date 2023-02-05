@@ -113,6 +113,14 @@ export const ContainerDetails = styled.div`
     }
     @media screen and (max-width: 506px){
       width: 340px;
+      div{
+        justify-content: center;
+         ul > li{
+        text-align: center;
+        font-size: 1rem;
+      }
+      }
+     
     }
   }
 `;

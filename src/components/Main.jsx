@@ -1,34 +1,40 @@
-import React from "react";
-import { ContainerMain, FlexMain } from "./css/Main";
-import RickyAndMorty from "../assets/main.png";
-import VideoMain from "../assets/videoRyck.mp4"
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import { ContainerImg, ContainerInfoContador, ContainerInfoMain, ContainerMain } from './css/Main'
+import RickVideo from "../assets/videoRyck.mp4"
+import {Redes} from "./Redes"
+import CountUp from 'react-countup'
 
-const Main = () => {
+const Main = () => {   
   return (
     <ContainerMain>
-      <FlexMain>
-        <div className="main-info">
-          <h1>Rick and Morty</h1>
-          <p>
-            Después de haber estado desaparecido durante casi 20 años, Rick
-            Sánchez llega de imprevisto a la puerta de la casa de su hija Beth y
-            se va a vivir con ella y su familia utilizando el garaje como su
-            laboratorio personal.
-          </p>
-          <NavLink to={`/personajes/1`}>
-          <button>más información</button>
-          </NavLink>
-          <div className="video-main">
-            <video  src={VideoMain} muted autoPlay controls loop></video>
+      <div className='grid-main'>
+        
+        <ContainerInfoMain>
+            <h1>Discover all the characters <u>Rick and Morty</u></h1>
+            <p className='sub-titulo'>Do not wait any longer and enjoy this incredible adventure with your favorite characters</p>
+            <ContainerInfoContador>
+                 <span className='barra uno'></span>
+                 <span className='barra dos'></span>
+                <span><h2><CountUp start={0} end={826} duration={2} />C</h2><p>Characters</p></span>
+                <span><h2><CountUp start={0} end={42} duration={2} />P</h2><p>Pages</p></span>
+                <span><h2><CountUp start={0} end={20} duration={2} />PC</h2><p>Pages Characters</p></span>
+          </ContainerInfoContador>
+            <div className='video-main'>
+            <video  src={RickVideo} controls loop></video>
+            </div>
+        </ContainerInfoMain>
+         
+        <ContainerImg>
+          <div className='cont-redes'>
+            <Redes />
           </div>
-        </div>
-        <div className="main-img">
-          <img src={RickyAndMorty} alt="RickyAndMorty" />
-        </div>
-      </FlexMain>
-    </ContainerMain>
-  );
-};
+           <span className='info-img'>After being missing for almost 20 years, Rick Sanchez shows up unexpectedly on his daughter Beth's doorstep and moves in with her and her family, using the garage as his personal laboratory.</span>
+           <button>explore</button>
+        </ContainerImg>
+      </div>
 
-export default Main;
+    </ContainerMain>
+  )
+}
+
+export default Main

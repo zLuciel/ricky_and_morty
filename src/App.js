@@ -1,5 +1,5 @@
 import {Route,Routes,useLocation} from "react-router-dom"
-import Main from "./components/Main";
+import Main from "./components/Main" 
 import  Nav  from "./components/Nav";
 import Characters from "./components/Characters";
 import Details from "./components/Details";

@@ -30,17 +30,17 @@ row-gap: 10px;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-animation: ${props => props.view ? "rotate 0.8s ease" : "none"};
+animation: ${props => props.view ? "rotate 1s ease" : "none"};
 @keyframes rotate {
 0% {
     opacity: 0;
-    transform: translateX(155%);
+    //transform: translateX(155%);
   }
-  70%{
+  /*70%{
     opacity: 0.3;
-  }
+  }*/
   100% {
-    transform: translateX(0%);
+    //transform: translateX(0%);
     opacity: 1;
   }
 }

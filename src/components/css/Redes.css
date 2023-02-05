@@ -10,7 +10,7 @@
     align-items: center;
 }
 .icon-redes{
-    margin: 80px  0;
+    margin: 40px  0; /**80px*/
     white-space: nowrap;
     position: relative;
 }

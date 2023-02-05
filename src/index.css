@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *,
 html {
   margin: 0;
@@ -10,7 +11,7 @@ html {
 }
 
 body {
- 
+  overflow-x:visible;
   font-family: 'Jacques Francois';
   position: relative;
   color: white;

@@ -46,6 +46,17 @@ export const ContainerSearch = styled.div`
     width: 100%;
     max-height: 170px;
     height: max-content;
+  ::-webkit-scrollbar {
+    border-radius: 10px;
+  display: initial;
+  width: 6px;
+  height: 7px;
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: greenyellow;
+}
   }
  /* @media screen and (max-width: 902px){
   display: none;

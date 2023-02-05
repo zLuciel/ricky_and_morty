@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
 export const ContainerCharacter = styled.div`
- //border: 2px solid greenyellow;
+ //border: 0.5px solid greenyellow;
 // border: 2px solid  yellow;
  //border:${({status}) => status === "Alive" ? "2px solid greenyellow":status === "unknown"? " 2px solid #00F0FF" : " 2px solid #FFB800"};
   overflow: hidden;
-  background: #212121;
+ // background: #212121;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
              -4px 4px 5px black;
 
-             background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(0.5px);
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(0.5px);
   border-radius: 15px;
   text-align: center;
   width: 220px;
   height: 300px;
   transition: transform 400ms ease;
   :hover{
-    z-index: 80;
-    box-shadow: -2px 2px 20px black, 2px -2px 20px black;
+    //z-index: 80;
+    //box-shadow: -2px 2px 20px black, 2px -2px 20px black;
     cursor: pointer;
     transform: scale(1.1);
   }
@@ -58,7 +58,7 @@ export const ContainerCharacter = styled.div`
     overflow: hidden;
     height: 180px;
     width: 100%;
-    background: url("https://blog.teamtreehouse.com/wp-content/uploads/2015/05/loading.gif") 50% no-repeat;
+    background:  url("https://blog.teamtreehouse.com/wp-content/uploads/2015/05/loading.gif") 50% no-repeat;
     img {
       width: 100%;
       height: 100%;
