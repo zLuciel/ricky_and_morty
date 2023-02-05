@@ -4,11 +4,10 @@ export const  ContainerMain = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-height: calc(100vh - 100px);
+min-height: calc(100vh - 100px);
 .grid-main{
     width: 1500px;
     height: 70vh;
-   // border: 1px solid greenyellow;
     display: grid;
     grid-template-columns: 800px 1fr;
     column-gap: 140px;
@@ -33,6 +32,7 @@ height: calc(100vh - 100px);
        grid-template-columns: 600px;
     }
     @media screen and (max-width: 636px){
+        height: max-content;
        grid-template-columns: 1fr;
        row-gap: 0px;
     }
@@ -110,6 +110,7 @@ margin-bottom: 30px;
 @media screen and (max-width: 479px){
     column-gap: 20px;
       width: 300px;
+      margin-bottom: 0px;
 }
 .barra{
     border-radius: 50px;
