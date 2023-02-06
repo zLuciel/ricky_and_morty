@@ -34,7 +34,7 @@ const Login = () => {
         <img src={Rigth} alt="AnimeLogin" className="login-img-rigth" />
         <img src={Left} alt="AnimeLogin" className="login-img-left" />
         <h1>
-          Welcom to <b>Ricck and Morty</b>
+          Welcom to <b>Rick and Morty</b>
         </h1>
         <div className="login-usuario">
           <input
