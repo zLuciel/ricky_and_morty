@@ -37,7 +37,7 @@ const Details = () => {
         </div>
       </div>
       <div style={{ width: "100px", height: "32px" }}>
-        <BtnDetails side={"back"} ruta={"/personajes/1"} />
+        <BtnDetails side={"back"} />
       </div>
     </ContainerDetails>
   );

@@ -56,8 +56,8 @@ return <Loading/>
         ))}
       </GridCharacter>
      <div className="btn-page">
-     {params.pages !== "1" && <BtnPersonaje type={""}  details={""} page={page} numPages={params} setPage={setPage} side={"back"} />}
-     <BtnPersonaje details={""} type={""} page={page} numPages={params} setPage={setPage} side={"skip"} />
+     {params.pages !== "1" && <BtnPersonaje type={""}  details={""} page={page}  setPage={setPage} side={"back"} />}
+     <BtnPersonaje details={""} type={""} page={page}  setPage={setPage} side={"skip"} />
      </div>
     </ContainerCharacters>
   );

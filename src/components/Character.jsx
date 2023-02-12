@@ -20,13 +20,15 @@ const Character = ({
   const [infoView, setInfoView] = useState(false);
   const Mostrar = () => setInfoView(true);
   const Ocultar = () => setInfoView(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const distpacth = useDispatch();
   const handleAddFavorite = () => distpacth(addFavorite(id));
   const handleDelete = () => distpacth(Delete(id));
-  const handleNavigate = ()=>  type.length === 0 ? navigate(`/personajes/details/${"all"}/${id}`) : navigate(`/personajes/details/${type}/${id}`)
+  const handleNavigate = () =>
+    type.length === 0
+      ? navigate(`/personajes/details/${"all"}/${id}`)
+      : navigate(`/personajes/details/${type}/${id}`);
   return (
-
     <ContainerCharacter
       status={status}
       infoView={infoView}
@@ -34,7 +36,7 @@ const Character = ({
       onMouseOut={Ocultar}
     >
       <div className="img-card">
-        <img  src={img} alt={name} />
+        <img src={img} alt={name} />
 
         <span onClick={handleAddFavorite} className="addFavorite">
           <BsFillSuitHeartFill />
@@ -44,13 +46,15 @@ const Character = ({
             <TiDelete />
           </span>
         )}
-        <StatusCard status={status}/>
-        <button onClick={handleNavigate} className="btn-card-id">#{id}</button>
+        <StatusCard status={status} />
+        <button onClick={handleNavigate} className="btn-card-id">
+          #{id}
+        </button>
       </div>
       <div className="info-card">
-        <h2  onClick={handleNavigate}>{name}</h2>
-        <p  onClick={handleNavigate}>{species}</p>
-        <p  onClick={handleNavigate}>{gender}</p>
+        <h2 onClick={handleNavigate}>{name}</h2>
+        <p onClick={handleNavigate}>{species}</p>
+        <p onClick={handleNavigate}>{gender}</p>
       </div>
     </ContainerCharacter>
   );
