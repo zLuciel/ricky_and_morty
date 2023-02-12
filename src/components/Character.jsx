@@ -45,7 +45,7 @@ const Character = ({
           </span>
         )}
         <StatusCard status={status}/>
-          <button onClick={handleNavigate} className="btn-card-id">#{id}</button>
+        <button onClick={handleNavigate} className="btn-card-id">#{id}</button>
       </div>
       <div className="info-card">
         <h2  onClick={handleNavigate}>{name}</h2>

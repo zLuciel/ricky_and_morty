@@ -17,11 +17,12 @@ export const getGender = (num,query,value) => {
   };
 };
 
-export const getSearch = (num,query,value) => {
+export const getSearch = (value) => {
   return function (dispatch) {
-    fetch(`${URL}/?page=${num}&${query}=${value}`)
+    //fetch(`http://localhost:3001/search?name=${value}`)
+    fetch(`${URL}/?name=${value}`)
     .then(res => res.json())
-    .then(data => dispatch({type:GET_SEARCH,payload:data.results}));
+    .then(data => dispatch({type:GET_SEARCH,payload:data.results}));//,results
   };
 };
 

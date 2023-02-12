@@ -4,7 +4,8 @@ import Rigth from "../assets/rigth.png";
 import Left from "../assets/left.png";
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-
+import { RiLockPasswordFill } from 'react-icons/ri';
+import { FaUserCircle } from 'react-icons/fa';
 //crea un estado global de iniciar sesion
 
 const Login = () => {
@@ -24,10 +25,12 @@ const Login = () => {
       setError(true);
     }
   };
- useEffect(()=>{
-   if(store === true) navigate("/home")
- // eslint-disable-next-line react-hooks/exhaustive-deps
- },[store])
+
+  useEffect(() => {
+    if (store === "true") {
+      navigate("/home");
+    }
+  }, [store, navigate]);
   return (
     <LoginContainerFlex>
       <LoginAnime>
@@ -37,6 +40,7 @@ const Login = () => {
           Welcom to <b>Rick and Morty</b>
         </h1>
         <div className="login-usuario">
+          <FaUserCircle className="ico-login"/>
           <input
             onChange={(e) => setGmail(e.target.value)}
             value={gmail}
@@ -45,6 +49,7 @@ const Login = () => {
           />
         </div>
         <div className="login-password">
+          <RiLockPasswordFill className="ico-login"/>
           <input
             onChange={(e) => setPassword(e.target.value)}
             value={password}

@@ -11,7 +11,7 @@ const Search = (props) => {
   const [mostrar, setMostrar] = useState(false);
 
   useEffect(() => {
-    if (search !== "") props.getSearch(1, "name", search);
+    if (search !== "") props.getSearch(search);
     
     //const CajaAnime = document.querySelector(".Search-Anime-visual");
     document.addEventListener("click", (e) => {
@@ -60,7 +60,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    getSearch: (num, query, value) => dispatch(getSearch(num, query, value)),
+    getSearch: (value) => dispatch(getSearch(value)),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

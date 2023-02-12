@@ -5,7 +5,8 @@ import {Redes} from "./Redes"
 import CountUp from 'react-countup'
 import { NavLink } from 'react-router-dom'
 
-const Main = () => {   
+const Main = () => {
+  
   return (
     <ContainerMain>
       <div className='grid-main'>
@@ -21,7 +22,7 @@ const Main = () => {
                 <span><h2><CountUp start={0} end={20} duration={2} />PC</h2><p>Pages Characters</p></span>
           </ContainerInfoContador>
             <div className='video-main'>
-            <video  src={RickVideo} controls loop></video>
+            <video  src={RickVideo} autoPlay muted controls loop></video>
             </div>
         </ContainerInfoMain>
          

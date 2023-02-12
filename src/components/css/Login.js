@@ -82,12 +82,18 @@ h1{
 .login-usuario,.login-password{
     margin-bottom: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     border: 1px solid greenyellow;
     width: 40%;
     height: 50px;
     padding-left: 10px;
+    .ico-login{
+      color: greenyellow;
+    }
     input{
+      margin-left: 10px;
         color: white;
         width: 100%;
         border: none;
