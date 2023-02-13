@@ -12,6 +12,10 @@ export const ContainerSearch = styled.div`
     justify-content: center;
     align-items: center;
     column-gap: 5px;
+    input::placeholder{
+      color: #D2D1D1;
+    }
+    //**Responsive */
     @media screen and (max-width: 1126px){
     width: 300px;
   }

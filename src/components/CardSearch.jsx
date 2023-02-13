@@ -13,7 +13,7 @@ export const CardSearch = ({name,img,id}) => {
          <div>
             <img src={img} alt={name} />
         </div>
-        <p>{name}</p>
+        <p className='trespunto'>{name}</p>
       </NavLink>
        <button onClick={handleAddFavorite} className='btn-favorite'>favorite</button>
     </CardSearchContainer>
