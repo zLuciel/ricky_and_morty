@@ -26,10 +26,10 @@ export const getSearch = (value) => {
   };
 };
 
-export const addFavorite = (id)=>{
+export const addFavorite = (id,type)=>{
   return {
     type:ADD_FAVORITE,
-    payload:id
+    payload:{id,type}
   }
 }
 export const Delete = (id)=>{

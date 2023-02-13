@@ -121,6 +121,12 @@ h1{
     width: 120px;
     height: 30px;
     margin-bottom:20px;
+    box-shadow: inset -4px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(-4px 4px 2px #000000);
+    transition: transform 400ms ease-in-out;
+    :hover{
+      background: white;
+    }
 }
 .login-con{
     margin-bottom:20px;

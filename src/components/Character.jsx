@@ -22,7 +22,7 @@ const Character = ({
   const Ocultar = () => setInfoView(false);
   const navigate = useNavigate();
   const distpacth = useDispatch();
-  const handleAddFavorite = () => distpacth(addFavorite(id));
+  const handleAddFavorite = () => distpacth(addFavorite(id,"characters"));
   const handleDelete = () => distpacth(Delete(id));
   const handleNavigate = () =>
     type.length === 0

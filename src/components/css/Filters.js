@@ -19,6 +19,8 @@ export const ContainerFilters = styled.div`
       border-radius: 50px;
       background: white;
       margin-bottom: 10px;
+      box-shadow: inset -4px 4px 4px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(-4px 4px 2px #000000);
       :hover{
       background: #CCFF00;
     }

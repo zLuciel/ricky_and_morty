@@ -12,7 +12,7 @@ const About = () => {
           </h1>
           <p>
             Futuro Desarollador full stack, gracias por tomarte el tiempo de ver
-            mi pagina web y espero te haya gustado nos vemos en el M3{" "}
+            mi pagina web y espero te haya gustado nos vemos en el M4{" "}
           </p>
           <Redes/>
         </div>

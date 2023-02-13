@@ -106,6 +106,7 @@ column-gap: 50px;
 align-items: center;
 margin-top: 20px;
 margin-bottom: 30px;
+box-shadow: -4px 4px 5px #000000, inset -4px 4px 25px #000000;
 //**Responsive */
 @media screen and (max-width: 479px){
     column-gap: 20px;
@@ -205,6 +206,11 @@ button{
     border: none;
     background: #CCFF00;
     border-radius: 50px;
+    box-shadow: inset -4px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(-4px 4px 2px #000000);
+    :hover{
+      background: white;
+    }
 }
 .info-img{
 position: absolute;

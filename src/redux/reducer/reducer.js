@@ -36,9 +36,14 @@ const reducer = (state = initialState, action)=>{
         favorite: state.favorite.filter(el => el.id !== action.payload)
     }
     case ADD_FAVORITE:
-    let validate = state.favorite.some(el=> el.id === action.payload)
+    let validate = state.favorite.some(el=> el.id === action.payload.id)
     let add;
-    validate ? add=[] : add = state.characters.filter(el => el.id === action.payload);
+    if(action.payload.type === "characters"){
+         add = validate ? [] :  state.characters.filter(el => el.id === action.payload.id);
+    }else{
+        add = validate ? [] :  state.searchCharacters.filter(el => el.id === action.payload.id);
+    }
+    
     return {
         ...state,
         favorite: [...state.favorite,...add],
