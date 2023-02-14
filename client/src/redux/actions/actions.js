@@ -1,9 +1,11 @@
 import { GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH, ADD_FAVORITE, DELETE } from "../actions-types/action-types";
 const URL = "https://rickandmortyapi.com/api/character"
+const url = "https://ricky-and-morty-api-zluciel.vercel.app";
 
 export const getCharacter = (id) => {
   return function (dispatch) {
-    fetch(`${URL}/${id}`)
+    fetch(`${url}/details/${id}`)
+    //fetch(`${URL}/${id}`)
     .then(res => res.json())
     .then(data => dispatch({type:GET_CHARACTER,payload:data}));
   };
@@ -11,7 +13,8 @@ export const getCharacter = (id) => {
 
 export const getGender = (num,query,value) => {
   return function (dispatch) {
-    fetch(`${URL}/?page=${num}&${query}=${value}`)
+    fetch(`${url}/filter?page=${num}&query=${query}&type=${value}`)
+    //fetch(`${URL}/?page=${num}&${query}=${value}`)
     .then(res => res.json())
     .then(data => dispatch({type:GET_FILTER_GENDER,payload:data}));
   };
@@ -19,8 +22,8 @@ export const getGender = (num,query,value) => {
 
 export const getSearch = (value) => {
   return function (dispatch) {
-    //fetch(`http://localhost:3001/search?name=${value}`)
-    fetch(`${URL}/?name=${value}`)
+    fetch(`${url}/search?name=${value}`)
+    //fetch(`${URL}/?name=${value}`)
     .then(res => res.json())
     .then(data => dispatch({type:GET_SEARCH,payload:data.results}));//,results
   };

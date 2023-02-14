@@ -39,12 +39,12 @@ const ApiRick = {
     //ejemplo http://localhost:3001/filter?page=2&query=gender&type=female
     const { page, query, type } = req.query;
     const API_URL = "https://rickandmortyapi.com/api/character/";
-    let characters = [];
+    let characters;
     try {
       const response = await axios.get(
         `${API_URL}?page=${page}&${query}=${type}`
       );
-      characters = response.data.results;
+      characters = response.data;
       res.status(200).json(characters);
     } catch (err) {
       res.status(404).json({ error: err.message });
