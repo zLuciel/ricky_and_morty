@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector } from "react-redux";
 import Character from "./Character";
 import { ContainerFavorite } from "./css/Favorite";
 import { GridCharacter } from "./css/GridCharacter";
 import { BsFillBookmarkHeartFill } from "react-icons/bs";
+import { getFavorite } from "../redux/actions/actions";
 export const Favorite = () => {
+  const dispatch = useDispatch()
   const favorite = useSelector((state) => state.favorite);
-  useEffect(() => {}, [favorite]);
+  useEffect(() => {
+    dispatch(getFavorite())
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (favorite.length === 0) {
     return (

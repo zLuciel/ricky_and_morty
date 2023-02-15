@@ -15,8 +15,11 @@ app.use((req, res, next) => {
 });
 
 app.listen(port)
+
 app.use(morgan("dev")) 
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+app.use(bodyParser.json({ limit: "50mb" }));
 console.log(`server on port ${port}`);
 
 app.use("/", routes)

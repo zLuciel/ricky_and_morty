@@ -21,7 +21,6 @@ const Characters = () => {
   
   const characters = useSelector((state)=> state.characters)
   const totalPages = useSelector((state)=> state.totalPages)
-  
   useEffect(() => {
      dispatch(getGender(page,query,gender)) 
     // eslint-disable-next-line react-hooks/exhaustive-deps  

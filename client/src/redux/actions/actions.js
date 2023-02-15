@@ -1,6 +1,6 @@
 import { GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH, ADD_FAVORITE, DELETE } from "../actions-types/action-types";
-const URL = "https://rickandmortyapi.com/api/character"
-const url = "https://ricky-and-morty-api-zluciel.vercel.app";
+//const URL = "https://rickandmortyapi.com/api/character"
+const url = process.env.API_URL;
 
 export const getCharacter = (id) => {
   return function (dispatch) {
@@ -29,15 +29,30 @@ export const getSearch = (value) => {
   };
 };
 
-export const addFavorite = (id,type)=>{
-  return {
-    type:ADD_FAVORITE,
-    payload:{id,type}
-  }
+export const addFavorite = (id)=>{
+  return function (dispatch) {
+    fetch(`${url}/favorites`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({id})
+    })
+    .then(res => res.json())
+    .then(data => dispatch({type:"EXITOSO",payload:data}));
+  };
+}
+export const getFavorite = ()=>{
+  return function (dispatch) {
+    fetch(`${url}/favorites`)
+    .then(res => res.json())
+    .then(data => dispatch({type:ADD_FAVORITE,payload:data}));
+  };
 }
 export const Delete = (id)=>{
-  return {
-    type:DELETE,
-    payload:id
-  }
+  return function (dispatch) {
+    fetch(`${url}/favorites/${id}`, {method: 'DELETE'})
+    .then(res => res.json())
+    .then(data => dispatch({type:DELETE,payload:data}));
+  };
 }
