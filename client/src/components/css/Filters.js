@@ -52,7 +52,7 @@ export const ContainerFilters = styled.div`
     width: 100%;
     height: ${(props) => (props.name === "Pages" ? "95px" : "max-content")};
     overflow-y: ${(props) => (props.name === "Pages" ? "scroll" : "none")};
-    background: rgba(0, 0, 0, 0.2);
+    background: rgb(0 0 0 / 52%);
     backdrop-filter: blur(5px);
     z-index: 500;
     list-style: none;
