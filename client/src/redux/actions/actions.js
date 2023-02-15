@@ -1,6 +1,6 @@
 import { GET_CHARACTER, GET_FILTER_GENDER, GET_SEARCH, ADD_FAVORITE, DELETE } from "../actions-types/action-types";
 //const URL = "https://rickandmortyapi.com/api/character"
-const url = process.env.API_URL;
+const url = process.env.REACT_APP_API_URL;
 
 export const getCharacter = (id) => {
   return function (dispatch) {
