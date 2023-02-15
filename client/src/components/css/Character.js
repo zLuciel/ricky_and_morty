@@ -7,10 +7,16 @@ export const ContainerCharacter = styled.div`
   overflow: hidden;
  // background: #212121;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
-             -4px 4px 5px black;
+             4px 4px 5px black;
 
   background: rgba(0,0,0,0.25);
   backdrop-filter: blur(0.5px);
+
+   //**puede ser */
+   box-shadow: rgb(0 0 0) 10px 10px 35px, rgb(0 0 0) -4px 4px 25px;
+   background: rgb(169 0 255 / 4%); 
+   backdrop-filter: blur(5px);
+  //** termina puede ser */
   border-radius: 15px;
   text-align: center;
   width: 220px;
