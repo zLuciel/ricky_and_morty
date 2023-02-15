@@ -44,9 +44,11 @@ export const ContainerSearch = styled.div`
     padding: 10px 20px;
     overflow-y: auto;
     position: absolute;
-    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #00000075;
+    background: rgb(0 0 0 / 6%);
     backdrop-filter: blur(25px);
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
     width: 100%;
     max-height: 170px;
     height: max-content;
