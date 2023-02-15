@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LoginContainerFlex = styled.div`
 overflow: hidden;
-width: 100vw;
+width: 100%;
 min-height: 100vh;
 display: flex;
 justify-content: center;
